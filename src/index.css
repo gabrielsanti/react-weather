@@ -1,0 +1,16 @@
+body {
+	background-color: #666;
+}
+.box {
+	width: 500px;
+	height: 200px;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+.today {
+	height: 100px;
+}
+
