@@ -1,19 +1,14 @@
 import React from "react";
 import "./Icon.css";
-import DayImage from "../icons/day.svg"
 import PropTypes from 'prop-types';
 
 class Icon extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
-
   render() {
     return (
       <div className="icon">
-        <img src={DayImage} 
-          alt="Sunny day" 
+        <img 
+          src={this.props.image} 
+          alt={this.props.description} 
           width={this.props.size}
           height={this.props.size}
         />
@@ -24,6 +19,8 @@ class Icon extends React.Component {
 
 Icon.propTypes = {
   size: PropTypes.number,
+  image: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default Icon;

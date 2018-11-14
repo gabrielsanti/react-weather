@@ -5,17 +5,20 @@ import PropTypes from 'prop-types';
 class Today extends React.Component {
 
   render() {
-    console.log(this.props.dayname)
     return (
       <div className="today">
         <div className="location">
-          <span>Castelfidardo</span>
+          <span>{this.props.city}</span>
           <span>Wheather</span>
         </div>
-        <Icon size="128"/>
+        <Icon 
+          image={'http://openweathermap.org/img/w/' + this.props.icon + '.png'} 
+          size={64}
+          description={this.props.description}
+        />
         <div className="tmpCurrent">
-          <span>20&deg;C</span>
-          <span>Sunny</span>            
+          <span>{parseInt(this.props.temperature)}&deg;C</span>
+          <span>{this.props.description}</span>            
         </div>
       </div>
     );
@@ -23,10 +26,10 @@ class Today extends React.Component {
 }
 
 Today.propTypes = {
-  dayName: PropTypes.string,
-  iconName: PropTypes.string,
-  tmpMax: PropTypes.number,
-  tmpMin: PropTypes.numberv
+  city: PropTypes.string,
+  icon: PropTypes.string,
+  temperature: PropTypes.number,
+  description: PropTypes.string
 };
 
 export default Today;

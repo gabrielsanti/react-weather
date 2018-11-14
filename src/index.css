@@ -30,6 +30,10 @@ body {
 	width: 33%;
 }
 
+.icon {
+	margin-top: 10px;
+}
+
 .location {
 	margin-top: 45px;
 	font-size: 1.3em;
