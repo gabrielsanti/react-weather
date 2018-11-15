@@ -13,7 +13,10 @@ state = {
     country: undefined,
     humidity: undefined,
     description: undefined,
-    error: undefined
+    error: undefined,
+    forecast: {
+      data: undefined
+    }
   }
 
   //getWeather is a method we'll use to make the api call
@@ -39,7 +42,7 @@ state = {
         country: response.sys.country,
         description: response.weather[0].main,
         icon: response.weather[0].icon,
-        forecast: {data: forecast_response},
+        forecast: {days: forecast_response.list},
         error: ""
       })
     } else {
@@ -63,7 +66,7 @@ state = {
           description={this.state.description} 
           icon={this.state.icon} 
         />
-      	<Forecast data={this.props.forecast.data}/>
+      	<Forecast days={this.state.forecast.days}/>
      
       </div>
     );
