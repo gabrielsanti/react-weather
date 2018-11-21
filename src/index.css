@@ -2,7 +2,7 @@ body {
 	background-color: #2490B8;
 }
 .box {
-	font-family: Ubuntu;
+	font-family: Arial;
 	color: #444;
 	width: 500px;
 	height: 280px;
@@ -62,12 +62,9 @@ ul.forecast {
 	padding: 0px;
 }
 
-ul.forecast li	{
+ul.forecast li.dayBox {	
 	list-style: none;
-}
-
-ul.forecast li div.dayBox {
-	width: 60px;
+	width: 80px;
 	height: 30px;
 	float: left;
 	margin: 10px;
